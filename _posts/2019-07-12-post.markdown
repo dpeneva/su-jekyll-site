@@ -1,0 +1,8 @@
+---
+layout: main
+title:  "Second post"
+date:   2019-07-12 11:00:52 +0300
+categories: jekyll update
+---
+
+This is the base Jekyll theme.  
