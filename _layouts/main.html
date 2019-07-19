@@ -7,8 +7,9 @@
     <title>{{ site.title }}</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
+    <script src="{{ site.baseurl }}/scripts/site.js"></script>
 </head>
-<body>
+<body class="page-{{page.title}}" >
 
 
     <div class="site">
@@ -39,12 +40,11 @@
 
         </main>
 
-        <aside class="site-sidebar">
-
-        </aside>
+        {% include sidebar.html %}
 
         <footer class="site-footer">
             <p>All rights reserved &copy; {{ site.title }}</p>
+            {% include navigation.html location="footer" %}
         </footer>
     </div>
    
