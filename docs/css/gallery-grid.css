@@ -1,0 +1,67 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0;
+    margin: 0;
+    grid-gap: 1em;
+    grid-auto-flow: dense;
+}
+
+.gallery li {
+    display: block;
+    list-style: none outside;
+    position: relative;
+    overflow: hidden;
+    grid-column: span 2;
+}
+
+.gallery li::before {
+    display: block;
+    content: '';
+    padding-top: 50%;
+}
+
+.gallery li.portrait {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.gallery li.portrait::before {
+    padding-top: 200%;
+}
+
+.gallery li.small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.gallery li.small::before {
+    padding-top: 100%;
+}
+
+.gallery li > a {
+    display: flex;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.gallery li.portrait a {
+    display: flex;
+}
+
+.gallery img,
+.gallery a,
+.gallery span {
+    display: block;
+}
+
+.gallery img {
+    widows: 100%;
+    height: auto;
+}
+
+.gallery li.portrait img,
+.gallery li.small img {
+    width: auto;
+    height: 100%;
+}
